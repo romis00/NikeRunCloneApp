@@ -9,25 +9,31 @@
 /* Begin PBXBuildFile section */
 		301BFD1324E6E6C4008251AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BFD1224E6E6C4008251AB /* AppDelegate.swift */; };
 		301BFD1524E6E6C4008251AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BFD1424E6E6C4008251AB /* SceneDelegate.swift */; };
-		301BFD1724E6E6C4008251AB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BFD1624E6E6C4008251AB /* FirstViewController.swift */; };
-		301BFD1924E6E6C4008251AB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BFD1824E6E6C4008251AB /* SecondViewController.swift */; };
+		301BFD1724E6E6C4008251AB /* BeginRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BFD1624E6E6C4008251AB /* BeginRunVC.swift */; };
+		301BFD1924E6E6C4008251AB /* LogVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301BFD1824E6E6C4008251AB /* LogVC.swift */; };
 		301BFD1C24E6E6C4008251AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301BFD1A24E6E6C4008251AB /* Main.storyboard */; };
 		301BFD1F24E6E6C4008251AB /* NikeRunClone.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 301BFD1D24E6E6C4008251AB /* NikeRunClone.xcdatamodeld */; };
 		301BFD2124E6E6C7008251AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 301BFD2024E6E6C7008251AB /* Assets.xcassets */; };
 		301BFD2424E6E6C7008251AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 301BFD2224E6E6C7008251AB /* LaunchScreen.storyboard */; };
+		305E564324EAC22100466816 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E564224EAC22100466816 /* LogTableViewCell.swift */; };
+		305E564524EC025500466816 /* CONSTANTS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E564424EC025500466816 /* CONSTANTS.swift */; };
+		305E564724EC098400466816 /* OnRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305E564624EC098400466816 /* OnRunVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		301BFD0F24E6E6C4008251AB /* NikeRunClone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NikeRunClone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		301BFD1224E6E6C4008251AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		301BFD1424E6E6C4008251AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		301BFD1624E6E6C4008251AB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		301BFD1824E6E6C4008251AB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		301BFD1624E6E6C4008251AB /* BeginRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginRunVC.swift; sourceTree = "<group>"; };
+		301BFD1824E6E6C4008251AB /* LogVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogVC.swift; sourceTree = "<group>"; };
 		301BFD1B24E6E6C4008251AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		301BFD1E24E6E6C4008251AB /* NikeRunClone.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NikeRunClone.xcdatamodel; sourceTree = "<group>"; };
 		301BFD2024E6E6C7008251AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		301BFD2324E6E6C7008251AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		301BFD2524E6E6C7008251AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		305E564224EAC22100466816 /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
+		305E564424EC025500466816 /* CONSTANTS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CONSTANTS.swift; sourceTree = "<group>"; };
+		305E564624EC098400466816 /* OnRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnRunVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +66,13 @@
 		301BFD1124E6E6C4008251AB /* NikeRunClone */ = {
 			isa = PBXGroup;
 			children = (
+				305E563C24EAB7F900466816 /* Utilities */,
+				305E563F24EAB81200466816 /* Extensions */,
+				305E563E24EAB80D00466816 /* Model */,
+				305E563D24EAB80700466816 /* View */,
+				305E564124EABC6700466816 /* Controller */,
 				301BFD1224E6E6C4008251AB /* AppDelegate.swift */,
 				301BFD1424E6E6C4008251AB /* SceneDelegate.swift */,
-				301BFD1624E6E6C4008251AB /* FirstViewController.swift */,
-				301BFD1824E6E6C4008251AB /* SecondViewController.swift */,
 				301BFD1A24E6E6C4008251AB /* Main.storyboard */,
 				301BFD2024E6E6C7008251AB /* Assets.xcassets */,
 				301BFD2224E6E6C7008251AB /* LaunchScreen.storyboard */,
@@ -71,6 +80,46 @@
 				301BFD1D24E6E6C4008251AB /* NikeRunClone.xcdatamodeld */,
 			);
 			path = NikeRunClone;
+			sourceTree = "<group>";
+		};
+		305E563C24EAB7F900466816 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				305E564424EC025500466816 /* CONSTANTS.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		305E563D24EAB80700466816 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				305E564224EAC22100466816 /* LogTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		305E563E24EAB80D00466816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		305E563F24EAB81200466816 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		305E564124EABC6700466816 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				301BFD1624E6E6C4008251AB /* BeginRunVC.swift */,
+				301BFD1824E6E6C4008251AB /* LogVC.swift */,
+				305E564624EC098400466816 /* OnRunVC.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +193,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				301BFD1924E6E6C4008251AB /* SecondViewController.swift in Sources */,
-				301BFD1724E6E6C4008251AB /* FirstViewController.swift in Sources */,
+				301BFD1924E6E6C4008251AB /* LogVC.swift in Sources */,
+				305E564524EC025500466816 /* CONSTANTS.swift in Sources */,
+				301BFD1724E6E6C4008251AB /* BeginRunVC.swift in Sources */,
+				305E564724EC098400466816 /* OnRunVC.swift in Sources */,
 				301BFD1F24E6E6C4008251AB /* NikeRunClone.xcdatamodeld in Sources */,
 				301BFD1324E6E6C4008251AB /* AppDelegate.swift in Sources */,
 				301BFD1524E6E6C4008251AB /* SceneDelegate.swift in Sources */,
+				305E564324EAC22100466816 /* LogTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
