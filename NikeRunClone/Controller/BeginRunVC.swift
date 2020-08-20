@@ -7,12 +7,30 @@
 //
 
 import UIKit
+import MapKit
 
-class BeginRunVC: UIViewController {
+class BeginRunVC: UIViewController, MKMapViewDelegate {
 
+    @IBOutlet weak var mapView: MKMapView!
+    
+    var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        checkLocationAuthStatus()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.activityType = .fitness
+        
+        mapView.delegate = self
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        locationManager.delegate = self
+        locationManager.startUpdatingLocation()
+    }
+    override func viewDidDisappear(_ animated: Bool) {
+        locationManager.stopUpdatingLocation()
     }
 
     @IBAction func startRubBtnPressed(_ sender: Any) {
@@ -28,5 +46,31 @@ class BeginRunVC: UIViewController {
         present(onRunVC, animated: false, completion: nil)
     }
     
+    @IBAction func centerMapBtnPressed(_ sender: Any) {
+        mapView.setUserTrackingMode(.follow, animated: true)
+    }
+    
 }
 
+//Extension for location configurations and manipulating
+extension BeginRunVC: CLLocationManagerDelegate {
+    
+    func checkLocationAuthStatus() {
+        if CLLocationManager.authorizationStatus() != .authorizedWhenInUse {
+            locationManager.requestWhenInUseAuthorization()
+        }
+        else {
+            return
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            checkLocationAuthStatus()
+            mapView.showsUserLocation = true
+            mapView.setUserTrackingMode(.follow, animated: true)
+        } else {
+            return
+        }
+    }
+}

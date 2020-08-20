@@ -116,8 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				301BFD1624E6E6C4008251AB /* BeginRunVC.swift */,
-				301BFD1824E6E6C4008251AB /* LogVC.swift */,
 				305E564624EC098400466816 /* OnRunVC.swift */,
+				301BFD1824E6E6C4008251AB /* LogVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
